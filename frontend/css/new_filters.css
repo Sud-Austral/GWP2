@@ -1,0 +1,76 @@
+/* Modern Filter Card Design */
+.filter-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    /* Responsive wrap */
+    gap: 1.5rem;
+    align-items: flex-end;
+    /* Align inputs with button */
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group.search-group {
+    flex: 2;
+    /* Search bar wider */
+    min-width: 300px;
+}
+
+.filter-group.action-group {
+    flex: 0 0 auto;
+    min-width: auto;
+}
+
+.filter-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.filter-card .form-input,
+.filter-card .form-select {
+    width: 100%;
+    /* Override global heights for consistency in filters */
+    height: 42px;
+    border-color: #e2e8f0;
+    background-color: #f8fafc;
+}
+
+.filter-card .form-input:focus,
+.filter-card .form-select:focus {
+    background-color: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+.clean-filters-btn {
+    height: 42px;
+    padding: 0 1.5rem;
+    background: #f1f5f9;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.clean-filters-btn:hover {
+    background: #e2e8f0;
+    color: var(--text-primary);
+}
